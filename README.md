@@ -29,15 +29,13 @@ cd capybara-vue
 ```
 2. Instale as dependências
 ```bash
-Copiar
-Editar
-npm install
+npm i
+yarn
 ```
 3. Inicie o servidor de desenvolvimento
 ```bash
-Copiar
-Editar
 npm run dev
+yarn dev
 ```
 A aplicação estará disponível em http://localhost:5173.
 
