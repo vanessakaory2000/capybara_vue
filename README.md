@@ -1,7 +1,13 @@
 # 🛒 Capybara Store
 
 Capybara é uma aplicação web construída com **Vue 3**, que permite aos usuários visualizar, favoritar e adicionar produtos ao carrinho de compras. Os dados são consumidos da API DummyJSON, e o estado do carrinho e favoritos é armazenado no localStorage.
-Atividade avaliativa para o 3º termo na matéria de front-end lecionado pelo professor Valdir Júnior.
+Atividade avaliativa para o 3º termo na matéria de front-end lecionado pelo professor Valdir Júnior. 
+
+<br>
+
+### [▶️ Apresentação YouTube](https://www.youtube.com/watch?v=l8Hg8PZUtgk)
+
+<br>
 
 ## 👥 Integrantes
 - Estevão Alves dos Santos 1990000
