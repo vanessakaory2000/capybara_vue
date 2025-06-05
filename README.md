@@ -1,6 +1,11 @@
-# 🛒 Capybara - Catálogo de Produtos com Vue.js
+# 🛒 Capybara Store
 
-Capybara é uma aplicação web construída com **Vue 3**, que permite aos usuários visualizar, favoritar e adicionar produtos ao carrinho de compras. Os dados são consumidos da API [DummyJSON](https://dummyjson.com/), e o estado do carrinho e favoritos é armazenado no `localStorage`.
+Capybara é uma aplicação web construída com **Vue 3**, que permite aos usuários visualizar, favoritar e adicionar produtos ao carrinho de compras. Os dados são consumidos da API DummyJSON, e o estado do carrinho e favoritos é armazenado no localStorage.
+Atividade avaliativa para o 3º termo na matéria de front-end lecionado pelo professor Valdir Júnior.
+
+## 👥 Integrantes
+- Estevão Alves dos Santos 1990000
+- Vanessa Kaori Kurauchi 2002344
 
 ## ✨ Funcionalidades
 
@@ -37,12 +42,12 @@ yarn
 npm run dev
 yarn dev
 ```
-A aplicação estará disponível em http://localhost:5173.
+Se a porta 5173 estiver desocupada, a aplicação estará disponível em http://localhost:5173.
 
-🔗 API utilizada
+## 🔗 API utilizada
 https://dummyjson.com/products
 
-📸 Captura de Tela
+## 📸 Captura de Tela
 
 ![Main Page](./public/tela_principal.png)
 ![Product Details](./public/detalhes_produto.png)
