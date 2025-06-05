@@ -57,10 +57,10 @@
         </p>
 
         <button
-          @click="addToCart"
+          @click="inCart ? removeFromCart() : addToCart()"
           class="mt-4 px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-md transition"
         >
-          Add to Cart
+          {{ inCart ? "Remove from Cart" : "Add to Cart" }}
         </button>
 
         <button
@@ -88,6 +88,7 @@ const product = ref(null);
 const loading = ref(true);
 const mainImage = ref("");
 const isFavorite = ref(false);
+const inCart = ref(false);
 
 const fetchProduct = async () => {
   loading.value = true;
@@ -98,6 +99,7 @@ const fetchProduct = async () => {
     product.value = response.data;
     mainImage.value = product.value.thumbnail || product.value.images[0];
     checkIfFavorite();
+    checkProductInCart();
   } catch {
     product.value = null;
   } finally {
@@ -105,9 +107,13 @@ const fetchProduct = async () => {
   }
 };
 
+const checkProductInCart = () => {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  inCart.value = cart.some((item) => item.id === product.value.id);
+};
+
 const addToCart = () => {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
   const existingProduct = cart.find((item) => item.id === product.value.id);
 
   if (existingProduct) {
@@ -117,8 +123,14 @@ const addToCart = () => {
   }
 
   localStorage.setItem("cart", JSON.stringify(cart));
+  checkProductInCart();
+};
 
-  alert("Product added to the cart!");
+const removeFromCart = () => {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart = cart.filter((item) => item.id !== product.value.id);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  checkProductInCart();
 };
 
 const checkIfFavorite = () => {

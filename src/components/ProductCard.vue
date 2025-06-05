@@ -1,12 +1,12 @@
 <template>
   <router-link
     :to="`/product/${product.id}`"
-    class="block max-w-sm bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col justify-between"
+    class="block sm:max-w-sm bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 flex flex-col justify-between"
   >
     <img
       :src="product.thumbnail || product.images[0]"
       :alt="product.title"
-      class="w-full h-48 object-cover"
+      class="w-full h-48 object-contain sm:object-cover"
     />
 
     <div class="p-4 flex-1 flex flex-col justify-between">
@@ -47,7 +47,8 @@
       </div>
 
       <div class="text-sm text-gray-600 mb-1">
-        <strong>Stock:</strong> {{ product.stock }}
+        <strong>Stock:</strong> {{ product.stock }} | 
+        <strong>{{ product.stock ? "Avalaible" : "Unavailable" }}</strong>
       </div>
       <div class="text-lg font-semibold text-green-700">
         $ {{ product.price.toFixed(2) }}

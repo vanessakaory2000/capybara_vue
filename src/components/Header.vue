@@ -1,7 +1,7 @@
 <template>
   <header class="w-full h-28 bg-green-300/50">
-    <div class="container mx-auto h-full flex items-center justify-between">
-      <router-link to="/" class="text-5xl font-bold text-yellow-700">
+    <div class="container mx-auto h-full flex items-center justify-between px-4">
+      <router-link to="/" class="text-3xl sm:text-5xl font-bold text-yellow-700">
         Capybara
       </router-link>
 
